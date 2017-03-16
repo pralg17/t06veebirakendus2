@@ -1,3 +1,2 @@
-# t06veebirakendus2
-
-Springi veebirakendus koos andmebaasist otsingu või automaattestidega. 
+# testid2017
+Testide harjutamine
