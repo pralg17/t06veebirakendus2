@@ -12,7 +12,7 @@ public class EsimeneTest {
 
         Rakendus r = new Rakendus();
 
-        String code = "38905220293";
+        String code = "389052202931";
 
         assertEquals("Id is empty", r.idCode(""));
         assertEquals("Id is missing", r.idCode(null));
