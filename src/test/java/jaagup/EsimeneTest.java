@@ -21,6 +21,6 @@ public class EsimeneTest {
     @Test
     public void idTestFirstNumber() {
 
-        assertEquals("First character must be 3 - 6", r.IdCodeFirstNumber("48905220293"));
+        assertEquals("First character must be 3 - 6", r.IdCodeFirstNumber("18905220293"));
     }
 }

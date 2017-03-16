@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: jaagup.EsimeneTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec - in jaagup.EsimeneTest
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec <<< FAILURE! - in jaagup.EsimeneTest
+idTestFirstNumber(jaagup.EsimeneTest)  Time elapsed: 0.007 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[First character must be 3 - 6]> but was:<[18905220293]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at jaagup.EsimeneTest.idTestFirstNumber(EsimeneTest.java:24)
+
