@@ -6,18 +6,21 @@ import static org.junit.Assert.*;
 
 public class EsimeneTest {
 
+    Rakendus r = new Rakendus();
 
     @Test
-    public void averageTest1() {
-
-        Rakendus r = new Rakendus();
-
-        String code = "389052202931";
+    public void idTest1() {
 
         assertEquals("Id is empty", r.idCode(""));
         assertEquals("Id is missing", r.idCode(null));
 
-        assertEquals("Id must be 11 characters", r.idCode(code));
+        assertEquals("Id must be 11 characters", r.idCode("38905220293"));
+
     }
 
+    @Test
+    public void idTestFirstNumber() {
+
+        assertEquals("First character must be 3 - 6", r.IdCodeFirstNumber("48905220293"));
+    }
 }
