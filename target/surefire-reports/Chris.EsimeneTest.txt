@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: Chris.EsimeneTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec <<< FAILURE! - in Chris.EsimeneTest
-BankATest(Chris.EsimeneTest)  Time elapsed: 0.007 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<[The bank account must be 20 characters long]> but was:<[EE9099001234567890124]>
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec <<< FAILURE! - in Chris.EsimeneTest
+BankTest2(Chris.EsimeneTest)  Time elapsed: 0.003 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[The bank account must contain it's nation code(EE)]> but was:<[909900123456789012]>
 	at org.junit.Assert.assertEquals(Assert.java:115)
 	at org.junit.Assert.assertEquals(Assert.java:144)
-	at Chris.EsimeneTest.BankATest(EsimeneTest.java:20)
+	at Chris.EsimeneTest.BankTest2(EsimeneTest.java:30)
 

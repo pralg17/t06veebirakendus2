@@ -24,6 +24,18 @@ public class Rakendus{
 		return account_nr;
 		
 	}
+	
+	String BankAccountNCode(String account_nr){
+		
+		String N_code_Estonia = account_nr.substring(0, 2);
+		
+		if(N_code_Estonia.equals("EE")){
+			account_nr = "The bank account must contain it's nation code";
+		}
+		
+		return account_nr;
+		
+	}
 
 	public static void main(String[] args){
 		
