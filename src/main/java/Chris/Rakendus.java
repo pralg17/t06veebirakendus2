@@ -36,6 +36,18 @@ public class Rakendus{
 		return account_nr;
 		
 	}
+	
+	String BankAccountBCode(String account_nr){
+		
+		String Bank_code_SEB = account_nr.substring(3, 5);
+		
+		if(Bank_code_SEB.equals("10")){
+			account_nr = "The bank account must contain it's bank code";
+		}
+		
+		return account_nr;
+		
+	}
 
 	public static void main(String[] args){
 		

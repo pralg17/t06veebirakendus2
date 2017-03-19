@@ -31,4 +31,14 @@ public class EsimeneTest{
 		
 	}
 	
+	@Test
+	public void BankTest3(){
+		
+		Rakendus r = new Rakendus();
+		
+		//Test to see if the bank account contains it's bank code
+		assertEquals("The bank account must contain it's bank code (SEB bank)", r.BankAccountBCode("EE901100123456789012"));
+		
+	}
+	
 }
