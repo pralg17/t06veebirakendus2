@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Chris.EsimeneTest" time="0.003" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="Chris.EsimeneTest" time="0.007" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el6_8.x86_64/jre/lib/amd64"/>
@@ -57,5 +57,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="k_test" classname="Chris.EsimeneTest" time="0.003"/>
+  <testcase name="BankATest" classname="Chris.EsimeneTest" time="0.007">
+    <failure message="expected:&lt;[The bank account must be 20 characters long]&gt; but was:&lt;[EE9099001234567890124]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<[The bank account must be 20 characters long]> but was:<[EE9099001234567890124]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at Chris.EsimeneTest.BankATest(EsimeneTest.java:20)
+]]></failure>
+  </testcase>
 </testsuite>

@@ -7,21 +7,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class Rakendus{
 	
-
-	String k_ymbermoot(String kylg1, String kylg2, String kylg3){
-	
-		String ymbermoot = kylg1 + kylg2 + kylg3;
-	
-		if(kylg1.equals("") || kylg2.equals("") || kylg3.equals("")){
-			return "Empty data";
+	String BankAccount(String account_nr){
+		
+		if(account_nr == null){
+			account_nr = "Missing data";
 		}
-	
-		if(kylg1 == null || kylg2 == null || kylg3 == null){
-			return "Data input is missing";
+		
+		else if(account_nr.equals("")){
+			account_nr = "No data was entered";
 		}
-	
-		return ymbermoot;
-}
+		
+		else if(account_nr.length() == 20){
+			account_nr = "The bank account must be 20 characters long";
+		}
+		
+		return account_nr;
+		
+	}
 
 	public static void main(String[] args){
 		

@@ -6,24 +6,18 @@ import static org.junit.Assert.*;
 public class EsimeneTest{
 	
 	@Test
-	public void k_test1(){
+	public void BankATest(){
 		
 		Rakendus r = new Rakendus();
 		
-		//Tests to check if any data was entered
-		assertEquals("Empty data", r.k_ymbermoot("", "", ""));
-		assertEquals("Data input is missing", r.k_ymbermoot(null, null, null));
+		String account_nr = "EE9099001234567890124";
 		
-	}
-	
-	@Test
-	public void k_test2(){
+		//Tests to see if any data was entered
+		assertEquals("Missing data", r.BankAccount(null));
+		assertEquals("No data was entered", r.BankAccount(""));
 		
-		Rakendus r = new Rakendus();
-		
-		//Tests to see if data is suitable
-		assertEquals("This kind of triangle cannot exist", r.k_ymbermoot("0", "1", "2"));
-		assertEquals("The sum of a triangle's inner angles must always be 180 degrees")
+		//Test to see if the bank account is 20 characters long
+		assertEquals("The bank account must be 20 characters long", r.BankAccount(account_nr));
 		
 	}
 	
