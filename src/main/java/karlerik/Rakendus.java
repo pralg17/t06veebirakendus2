@@ -24,6 +24,10 @@ public class Rakendus {
 			return "Andmed on tyhjad";
 		}
 		
+		if(Double.parseDouble(wallet) < 0 || Double.parseDouble(itemPrice) < 0 ) {
+			return "Arvud ei saa olla negatiivsed";
+		}
+		
 		if(Double.parseDouble(wallet) < Double.parseDouble(itemPrice)) {
 			return "Ostu jaoks ei ole piisavalt raha";
 		}

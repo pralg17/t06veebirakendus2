@@ -46,6 +46,17 @@ public class HWTest {
 	}
 	
 	
+	@Test
+	public void shoppingCartTest4() {
+		Rakendus r = new Rakendus();
+		assertEquals("Arvud ei saa olla negatiivsed", r.shoppingCart("Vintage V100WR", "-587.65", "500"));
+		assertEquals("Arvud ei saa olla negatiivsed", r.shoppingCart("Vintage V100WR", "587.65", "-500"));
+		assertEquals("Toode Ibanez AT100CL-SB, hind: 0.00 EUR, makstud: 0.00 EUR, tagasi: 0.00 EUR", r.shoppingCart("Ibanez AT100CL-SB", "0.00", "0.00"));
+		/* Results :
+
+		Tests run: 4, Failures: 0, Errors: 0, Skipped: 0 */
+	}
+	
 	
 	
 	
