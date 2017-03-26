@@ -27,7 +27,7 @@ public class Rakendus {
             return answer;
 
 
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             return "Sisend ei ole arv";
         }
 

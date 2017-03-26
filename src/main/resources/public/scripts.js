@@ -23,4 +23,3 @@ function sendData() {
     xhttp.send();
 
 }
-
