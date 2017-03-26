@@ -15,6 +15,15 @@ public class Rakendus {
 	String shoppingCart(String item, String itemPrice, String wallet) {
 		
 		DecimalFormat format = new DecimalFormat("0.00");
+		
+		if(item == null || itemPrice == null || wallet == null) {
+			return "Andmeid ei ole sisestatud";
+		}
+		
+		if(item.equals("") || itemPrice.equals("") || wallet.equals("")) {
+			return "Andmed on tyhjad";
+		}
+		
 		double change = Double.parseDouble(wallet) - Double.parseDouble(itemPrice);
 		
 		return "Toode " + item + ", hind: " + itemPrice + " EUR, makstud: " + wallet + " EUR, tagasi: " + format.format(change) + " EUR";
