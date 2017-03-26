@@ -35,6 +35,19 @@ public class HWTest {
 		Tests run: 2, Failures: 0, Errors: 0, Skipped: 0 */
 	}
 	
+	@Test
+	public void shoppingCartTest3() {
+		Rakendus r = new Rakendus();
+		assertEquals("Ostu jaoks ei ole piisavalt raha", r.shoppingCart("Vintage V100WR", "587.65", "500"));
+		assertEquals("Toode Ibanez AT100CL-SB, hind: 2673.99 EUR, makstud: 2673.99 EUR, tagasi: 0.00 EUR", r.shoppingCart("Ibanez AT100CL-SB", "2673.99", "2673.99"));
+		/* Results :
+
+		Tests run: 3, Failures: 0, Errors: 0, Skipped: 0 */
+	}
+	
+	
+	
+	
 	
 
 	
