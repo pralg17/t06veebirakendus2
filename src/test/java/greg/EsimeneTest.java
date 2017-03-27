@@ -23,5 +23,20 @@ public class EsimeneTest{
 		r2.looUusInimene("Greg");
 		assertEquals(r.eesnimi, r2.eesnimi);
 	}
+
+
+/*
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running greg.EsimeneTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in g                                                                                                                                                             reg.EsimeneTest
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+*/
 	
 }
