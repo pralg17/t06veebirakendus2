@@ -14,8 +14,12 @@ public class Rakendus {
 		} else if(sisend.equals("")) {
             return "tyhi sisend";
         }*/
-        if(sqr == null || sqr.equals("") || sqr.equals("0")) {
+        if((vbl == null || vbl.equals("") || vbl.equals("0")) && (lnr == null || lnr.equals("") || lnr.equals("0"))){
+            return "x1 = x2 = 0.0";
+            
+        } else if(sqr == null || sqr.equals("") || sqr.equals("0")) {
             return "Tegemist pole ruutvõrrandiga";
+            
         } else if(lnr == null || lnr.equals("") || lnr.equals("0")) {
             Float a = Float.parseFloat(sqr);
             Float c = Float.parseFloat(vbl);

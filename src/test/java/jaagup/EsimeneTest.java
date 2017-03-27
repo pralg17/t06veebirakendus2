@@ -46,4 +46,10 @@ public class EsimeneTest{
 		assertEquals("x1 = 0.0 ja x2 = -4.0", r.sqrequ("1","4",""));
 	}
 	
+	@Test
+    public void rvl7(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = x2 = 0.0", r.sqrequ("1","",""));
+	}
+	
 }
