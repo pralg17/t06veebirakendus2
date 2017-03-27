@@ -20,12 +20,19 @@ public class Rakendus {
         Float c = Float.parseFloat(vbl);
         
         Float diskr = b*b-4*a*c;
-        Double lah1 = (-b+Math.sqrt(diskr))/(2*a);
-        Double lah2 = (-b-Math.sqrt(diskr))/(2*a);
-        //String x1 = valueOf(lah1);
-        //String x2 = valueOf(lah2);
+        if(diskr == 0) {
+            Double lah1 = (-b+Math.sqrt(diskr))/(2*a);
+            return "x1 = x2 = " + lah1;
+            
+        } else if(diskr < 0) {
+            return "Reaalarvulised lahendid puuduvad";
+            
+        } else {
+            Double lah1 = (-b+Math.sqrt(diskr))/(2*a);
+            Double lah2 = (-b-Math.sqrt(diskr))/(2*a);
+            return "x1 = " + lah1 + " ja x2 = " + lah2;
+        }
         
-        return "x1 = " + lah1 + " ja x2 = " + lah2;
         
 	}
 	
