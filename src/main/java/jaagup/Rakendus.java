@@ -14,25 +14,51 @@ public class Rakendus {
 		} else if(sisend.equals("")) {
             return "tyhi sisend";
         }*/
+        if(sqr == null || sqr.equals("") || sqr.equals("0")) {
+            return "Tegemist pole ruutvõrrandiga";
+        } else if(lnr == null || lnr.equals("") || lnr.equals("0")) {
+            Float a = Float.parseFloat(sqr);
+            Float c = Float.parseFloat(vbl);
         
-        Float a = Float.parseFloat(sqr);
-        Float b = Float.parseFloat(lnr);
-        Float c = Float.parseFloat(vbl);
-        
-        Float diskr = b*b-4*a*c;
-        if(diskr == 0) {
-            Double lah1 = (-b+Math.sqrt(diskr))/(2*a);
-            return "x1 = x2 = " + lah1;
+            Float lahRuut = -c/a;
+            if(lahRuut < 0) {
+                return "Reaalarvulised lahendid puuduvad";
+                
+            }
+            Double lah1 = Math.sqrt(lahRuut);
+            Double lah2 = -Math.sqrt(lahRuut);
             
-        } else if(diskr < 0) {
-            return "Reaalarvulised lahendid puuduvad";
+            return "x1 = " + lah1 + " ja x2 = " + lah2;
+            
+        } else if(vbl == null || vbl.equals("") || vbl.equals("0")) {
+            Float a = Float.parseFloat(sqr);
+            Float b = Float.parseFloat(lnr);
+            
+            
+            Double lah1 = 0.0;
+            Float lah2 = -b/a;
+            
+            return "x1 = " + lah1 + " ja x2 = " + lah2;
             
         } else {
-            Double lah1 = (-b+Math.sqrt(diskr))/(2*a);
-            Double lah2 = (-b-Math.sqrt(diskr))/(2*a);
-            return "x1 = " + lah1 + " ja x2 = " + lah2;
+            Float a = Float.parseFloat(sqr);
+            Float b = Float.parseFloat(lnr);
+            Float c = Float.parseFloat(vbl);
+            
+            Float diskr = b*b-4*a*c;
+            if(diskr == 0) {
+                Double lah1 = (-b+Math.sqrt(diskr))/(2*a);
+                return "x1 = x2 = " + lah1;
+                
+            } else if(diskr < 0) {
+                return "Reaalarvulised lahendid puuduvad";
+                
+            } else {
+                Double lah1 = (-b+Math.sqrt(diskr))/(2*a);
+                Double lah2 = (-b-Math.sqrt(diskr))/(2*a);
+                return "x1 = " + lah1 + " ja x2 = " + lah2;
+            }
         }
-        
         
 	}
 	

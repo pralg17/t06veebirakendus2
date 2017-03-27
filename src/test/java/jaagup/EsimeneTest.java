@@ -28,4 +28,22 @@ public class EsimeneTest{
 		assertEquals("Reaalarvulised lahendid puuduvad", r.sqrequ("2","2","2"));
 	}
 	
+	@Test
+    public void rvl4(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = 2.0 ja x2 = -2.0", r.sqrequ("1","","-4"));
+	}
+	
+	@Test
+    public void rvl5(){
+		Rakendus r=new Rakendus();
+		assertEquals("Reaalarvulised lahendid puuduvad", r.sqrequ("1","","4"));
+	}
+	
+	@Test
+    public void rvl6(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = 0.0 ja x2 = -4.0", r.sqrequ("1","4",""));
+	}
+	
 }
