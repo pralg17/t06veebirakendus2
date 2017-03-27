@@ -1,10 +1,16 @@
 package alar;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@SpringBootApplication
 public class Rakendus {
-    public static void main(String[] args) {
-        System.getProperties().put("server.port", 4424);
-        Rakendus r = new Rakendus();
-    }
+
+
+    @RequestMapping("/check")
     public Boolean isMunchausenNumber(String number) {
         Double sum = 0.0;
 
@@ -34,10 +40,14 @@ public class Rakendus {
         } catch (NumberFormatException e) {
             return false;
         }
+    }
 
-
+    public static void main(String[] args) {
+        System.getProperties().put("server.port", 4480);
+        SpringApplication.run(Rakendus.class, args);
     }
 }
+
 
 //scl enable rh-maven33 bash
 //mvn package
