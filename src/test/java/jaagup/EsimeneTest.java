@@ -35,9 +35,33 @@ public class EsimeneTest{
 	}
 	
 	@Test
+    public void rvl8(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = 2.0 ja x2 = -2.0", r.sqrequ("1","0","-4"));
+	}
+	
+	@Test
+    public void rvl9(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = 2.0 ja x2 = -2.0", r.sqrequ("1",null,"-4"));
+	}
+	
+	@Test
     public void rvl5(){
 		Rakendus r=new Rakendus();
 		assertEquals("Reaalarvulised lahendid puuduvad", r.sqrequ("1","","4"));
+	}
+	
+	@Test
+    public void rvl10(){
+		Rakendus r=new Rakendus();
+		assertEquals("Reaalarvulised lahendid puuduvad", r.sqrequ("1","0","4"));
+	}
+	
+	@Test
+    public void rvl11(){
+		Rakendus r=new Rakendus();
+		assertEquals("Reaalarvulised lahendid puuduvad", r.sqrequ("1",null,"4"));
 	}
 	
 	@Test
@@ -47,9 +71,69 @@ public class EsimeneTest{
 	}
 	
 	@Test
+    public void rvl12(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = 0.0 ja x2 = -4.0", r.sqrequ("1","4","0"));
+	}
+	
+	@Test
+    public void rvl13(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = 0.0 ja x2 = -4.0", r.sqrequ("1","4",null));
+	}
+	
+	@Test
     public void rvl7(){
 		Rakendus r=new Rakendus();
 		assertEquals("x1 = x2 = 0.0", r.sqrequ("1","",""));
+	}
+	
+	@Test
+    public void rvl14(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = x2 = 0.0", r.sqrequ("1","0","0"));
+	}
+	
+	@Test
+    public void rvl15(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = x2 = 0.0", r.sqrequ("1",null,null));
+	}
+	
+	@Test
+    public void rvl16(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = x2 = 0.0", r.sqrequ("1","","0"));
+	}
+	
+	@Test
+    public void rvl17(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = x2 = 0.0", r.sqrequ("1","",null));
+	}
+	
+	@Test
+    public void rvl18(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = x2 = 0.0", r.sqrequ("1","0",""));
+	}
+	
+	@Test
+    public void rvl19(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = x2 = 0.0", r.sqrequ("1","0",null));
+	}
+	
+	@Test
+    public void rvl20(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = x2 = 0.0", r.sqrequ("1",null,""));
+	}
+	
+	@Test
+    public void rvl21(){
+		Rakendus r=new Rakendus();
+		assertEquals("x1 = x2 = 0.0", r.sqrequ("1",null,"0"));
 	}
 	
 }
