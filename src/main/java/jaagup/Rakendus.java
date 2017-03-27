@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class Rakendus {
 	
-	 String idCode(String code) {
+	 String codeTests(String code) {
         if (code == null) {
             code = "Id is missing";
 
@@ -21,23 +21,29 @@ public class Rakendus {
 
         return code;
     }
+	
+	String maleOrFemale(String code){
+		String kood = code.substring(0,1);
+		
+		if (kood.equals("3")||kood.equals("5")||kood.equals("1")){
+			code = "This is a man's id code";		
+		}else if (kood.equals("4")||kood.equals("6")||kood.equals("2")){
+			code = "This is a woman's id code";
+		}
+		
+		return code;
 
-    String IdCodeFirstNumber(String code) {
-        String temp = code.substring(0, 1);
+			
+	}
 
-        if (temp.equals("3") || temp.equals("4") || temp.equals("5") || temp.equals("6")) {
-            code = "First character must be 3 - 6";
-
-        }
-        return code;
-    }
+   
 	
 	public static void main(String[] args) {
-        Rakendus r = new Rakendus();
+        Rakendus rakendus = new Rakendus();
     }
 }
 
 
 //scl enable rh-maven33 bash
 //mvn package
-//java -jar target/boot3-1.0-SNAPSHOT.jar
+//java -jar target/testimine-1.jar
