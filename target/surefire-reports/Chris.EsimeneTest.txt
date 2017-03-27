@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Chris.EsimeneTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec <<< FAILURE! - in Chris.EsimeneTest
-BankTest2(Chris.EsimeneTest)  Time elapsed: 0.004 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<[The bank account must contain it's nation code(EE)]> but was:<[909900123456789012]>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at Chris.EsimeneTest.BankTest2(EsimeneTest.java:30)
-
-BankTest3(Chris.EsimeneTest)  Time elapsed: 0.006 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<[The bank account must contain it's bank code (SEB bank)]> but was:<[EE901100123456789012]>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at Chris.EsimeneTest.BankTest3(EsimeneTest.java:40)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec - in Chris.EsimeneTest

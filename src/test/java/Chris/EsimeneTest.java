@@ -27,7 +27,7 @@ public class EsimeneTest{
 		Rakendus r = new Rakendus();
 		
 		//Test to see if the bank account contains it's nation code
-		assertEquals("The bank account must contain it's nation code(EE)", r.BankAccountNCode("909900123456789012"));
+		assertEquals("The bank account must contain it's nation code(EE)", r.BankAccountNCode("EE901000123456789012"));
 		
 	}
 	
@@ -37,7 +37,7 @@ public class EsimeneTest{
 		Rakendus r = new Rakendus();
 		
 		//Test to see if the bank account contains it's bank code
-		assertEquals("The bank account must contain it's bank code (SEB bank)", r.BankAccountBCode("EE901100123456789012"));
+		assertEquals("The bank account must contain it's bank code (SEB bank)", r.BankAccountBCode("EE901000123456789012"));
 		
 	}
 	

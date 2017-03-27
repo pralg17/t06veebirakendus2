@@ -19,6 +19,7 @@ public class Rakendus{
 		
 		else if(account_nr.length() == 20){
 			account_nr = "The bank account must be 20 characters long";
+			return account_nr;
 		}
 		
 		return account_nr;
@@ -30,7 +31,8 @@ public class Rakendus{
 		String N_code_Estonia = account_nr.substring(0, 2);
 		
 		if(N_code_Estonia.equals("EE")){
-			account_nr = "The bank account must contain it's nation code";
+			account_nr = "The bank account must contain it's nation code(EE)";
+			return account_nr;
 		}
 		
 		return account_nr;
@@ -39,10 +41,11 @@ public class Rakendus{
 	
 	String BankAccountBCode(String account_nr){
 		
-		String Bank_code_SEB = account_nr.substring(3, 5);
+		String Bank_code_SEB = account_nr.substring(4, 6);
 		
 		if(Bank_code_SEB.equals("10")){
-			account_nr = "The bank account must contain it's bank code";
+			account_nr = "The bank account must contain it's bank code (SEB bank)";
+			return account_nr;
 		}
 		
 		return account_nr;
