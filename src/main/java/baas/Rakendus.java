@@ -48,7 +48,7 @@ public class Rakendus {
 		StringBuffer sb=new StringBuffer();
 		for(Filmid k: movie){
 			sb.append(k.nimi+" teenis "+k.raha+ " dollarit.");
-			for(Naitleja a: k.naitlejad){
+			for(Eelarve a: k.filmrahad){
 				sb.append(" Eelarve sellel filmil oli "+a.eelarve+" dollarit.");
 			}
 			sb.append("<br />");

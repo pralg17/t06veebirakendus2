@@ -18,15 +18,22 @@ mysql> SELECT * FROM filmid;
 +--------------+-------+-----------+
 
 
-CREATE TABLE naitlejad(
+CREATE TABLE filmrahad(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	fnimi VARCHAR(30),
 	eelarve INT,
 	FOREIGN KEY(fnimi) REFERENCES filmid(nimi)
 );
 
-INSERT INTO naitlejad VALUES(DEFAULT, 'Jason Bourne', 97000000);
-INSERT INTO naitlejad VALUES(DEFAULT, 'Logan', 120000000);
-INSERT INTO naitlejad VALUES(DEFAULT, 'The Martian', 108000000);
+INSERT INTO filmrahad VALUES(DEFAULT, 'Jason Bourne', 97000000);
+INSERT INTO filmrahad VALUES(DEFAULT, 'Logan', 120000000);
+INSERT INTO filmrahad VALUES(DEFAULT, 'The Martian', 108000000);
 
-
+mysql> SELECT * FROM filmrahad;
++----+--------------+-----------+
+| id | fnimi        | eelarve   |
++----+--------------+-----------+
+|  1 | Jason Bourne |  97000000 |
+|  2 | Logan        | 120000000 |
+|  3 | The Martian  | 108000000 |
++----+--------------+-----------+

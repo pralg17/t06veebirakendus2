@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Filmid</title>
+		<script>
+			var yhendus=new XMLHttpRequest();
+			yhendus.onreadystatechange=saabumine;
+			function vajutus(){
+			var aadress="/loetelu2?miinimum="+
+				document.getElementById("kast1").value
+			yhendus.open("GET", aadress, true);
+			yhendus.send();
+			}
+			var yhendus2=new XMLHttpRequest();
+			yhendus2.onreadystatechange=saabumine2;
+			function vajutus2(){
+			var aadress="/loetelu
+			yhendus2.open("GET", aadress, true);
+			yhendus2.send();
+			}
+			
+			function saabumine(){
+				if(yhendus.readyState==4){
+					document.getElementById("vastus").innerHTML=yhendus.responseText;
+				}
+			}
+			
+			function saabumine2(){
+				if(yhendus2.readyState==4){
+					document.getElementById("vastus2").innerHTML=yhendus2.responseText;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		Sisesta raha summa:
+			<input type="text" id="kast1"><br>
+			<input type="button" value="Uuri" onclick="vajutus()">
+		<div id ="vastus">
+			Vastus tuleb siia
+		</div>
+		
+		
+		Uuri infot filmide kohta:
+		<input type="button" value="Uuri järgi" onclick="vajutus()">
+		<div id ="vastus2">
+			Vastus tuleb siia
+		</div>
+		
+	</body>
+</html>

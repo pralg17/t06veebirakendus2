@@ -12,5 +12,5 @@ public class Filmid{
 	public int raha;
 	
 	@OneToMany(mappedBy="money")
-	Set<Naitleja> naitlejad;
+	Set<Eelarve> filmrahad;
 }
