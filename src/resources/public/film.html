@@ -14,7 +14,8 @@
 			var yhendus2=new XMLHttpRequest();
 			yhendus2.onreadystatechange=saabumine2;
 			function vajutus2(){
-			var aadress="/loetelu
+			var aadress="/loetelu"+
+				document.getElementById("kast2").value
 			yhendus2.open("GET", aadress, true);
 			yhendus2.send();
 			}
