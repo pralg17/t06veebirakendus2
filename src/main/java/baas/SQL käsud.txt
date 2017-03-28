@@ -1,0 +1,39 @@
+CREATE TABLE filmid(
+	nimi VARCHAR(50) NOT NULL PRIMARY KEY,
+	aasta INT,
+	raha INT
+);
+
+INSERT INTO filmid VALUES ('Logan', 2017, 88411916);
+INSERT INTO filmid VALUES ('The Martian', 2015, 228433663);
+INSERT INTO filmid VALUES ('Jason Bourne', 2016, 162434410);
+
+mysql> SELECT * FROM filmid;
++--------------+-------+-----------+
+| nimi         | aasta | raha      |
++--------------+-------+-----------+
+| Jason Bourne |  2016 | 162434410 |
+| Logan        |  2017 |  88411916 |
+| The Martian  |  2015 | 228433663 |
++--------------+-------+-----------+
+
+
+CREATE TABLE filmrahad(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	fnimi VARCHAR(30),
+	eelarve INT,
+	FOREIGN KEY(fnimi) REFERENCES filmid(nimi)
+);
+
+INSERT INTO filmrahad VALUES(DEFAULT, 'Jason Bourne', 97000000);
+INSERT INTO filmrahad VALUES(DEFAULT, 'Logan', 120000000);
+INSERT INTO filmrahad VALUES(DEFAULT, 'The Martian', 108000000);
+
+mysql> SELECT * FROM filmrahad;
++----+--------------+-----------+
+| id | fnimi        | eelarve   |
++----+--------------+-----------+
+|  1 | Jason Bourne |  97000000 |
+|  2 | Logan        | 120000000 |
+|  3 | The Martian  | 108000000 |
++----+--------------+-----------+
