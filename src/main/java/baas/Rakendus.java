@@ -39,7 +39,7 @@ public class Rakendus {
 	*/
 	
 	
-	//http://localhost:5555/loetelu2?miinimum=100000000
+	//http://localhost:5555/loetelu2?miinimum=10000000
 	//Jason Bourne teenis 162434410 dollarit. Eelarve sellel filmil oli 97000000 dollarit.
 	//The Martian teenis 228433663 dollarit. Eelarve sellel filmil oli 108000000 dollarit.
 	@RequestMapping("/loetelu2")
