@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Arvutamine</title>
+	<script>
+	  var hinded = "hinne=";                   
+	  var punktid = "&eap=";
+	  var oigedSisendid = "";
+	  var yhendus1=new XMLHttpRequest();                //hinde kontroll
+	  yhendus1.onreadystatechange=kontrolliSisestust;
+	  var yhendus2=new XMLHttpRequest();                //eap kontroll
+	  yhendus2.onreadystatechange=kontrolliSisestust;
+	  var yhendus3=new XMLHttpRequest();                //kaalutud keskmine
+	  yhendus3.onreadystatechange=andmedSaabusid;
+	  
+	 
+	  function lisa(){
+	    var hinne = document.getElementById("kast1").value;
+		var punkt = document.getElementById("kast2").value;
+		console.log(hinne);
+		console.log(punkt);
+		
+		//keskmise arvutamiseks, funktsioon arvuta
+	    hinded+= hinne + ";";        //hinne=sisestus;sisestus;  jne
+		punktid+= punkt + ";";      //&eap=sisestus;sisestus;   jne
+		
+		//ainult hinne, ainult eap
+		aadress1 = "/hinded?sisend=" + hinne;
+		aadress2 = "/punktid?sisend=" + punkt;
+		yhendus1.open("GET", aadress1, true);     //kontrolliSisestust, hindele
+		yhendus1.send();
+		yhendus2.open("GET", aadress2, true);     //kontrolliSisestust, eap'le
+		yhendus2.send();
+		 
+		document.getElementById("aadressile").innerHTML = hinded + punktid; //kontrolliks endale aadressirida
+		
+		document.getElementById("vastus").innerHTML = ""; //et eelmist vastust ei näitaks 
+	  }
+
+	  function arvuta(){
+	     aadress3 = "/keskmine?" + hinded + punktid;   //aadressirealt kogu kupatus
+		 yhendus3.open("GET", aadress3, true);           //funktsioon andmedSaabusid
+		 yhendus3.send();
+		 
+	  }
+	  function kontrolliSisestust(){
+		document.getElementById("hinne").innerHTML = yhendus1.responseText;  //iga sisestus
+		document.getElementById("punkt").innerHTML = yhendus2.responseText;  //iga sisestus
+		
+		//ainult need sisestused, mille põhjal keskmine arvutatakse
+		if(document.getElementById("hinne").innerHTML && document.getElementById("punkt").innerHTML){
+			if(document.getElementById("hinne").innerHTML.length < 5 && document.getElementById("punkt").innerHTML.length < 5){
+				oigedSisendid += "Hinne:" + document.getElementById("hinne").innerHTML + "  " + " EAP:" + document.getElementById("punkt").innerHTML + "<br>";
+			}
+		}
+		document.getElementById("oigedSisendid").innerHTML = oigedSisendid
+		
+		
+	 }
+	  function andmedSaabusid(){
+	     document.getElementById("vastus").innerHTML=yhendus3.responseText;  //kaalutud keskmine
+		 hinded = "hinne=";        //nullin sisestatud hinded
+		 punktid = "&eap=";        //nullin sisestatud punktid
+		 oigedSisendid = "";       //nullin
+		 
+	}
+	</script>
+  </head>
+  <body>
+  <p>Lisage hinded ja ainepunktid kaalutud keskmise hinde arvutamiseks</p>
+    <input type="text" id="kast1" placeholder="hinne">
+    <input type="text" id="kast2" placeholder="ainepunkt">
+	<input type="button" value="Lisa hinne ja ainepunkt" onclick="lisa()" />
+	<p>Lisatud hinne: <span id="hinne"></span></p>
+	<p>Lisatud ainepunkt: <span id="punkt"></span></p>
+	<br>
+    <input type="button" value="Arvuta" onclick="arvuta()" />
+	<p>Hinnete kaalutud keskmine: <span id="vastus"></span></p>
+	<p><span id="oigedSisendid"></span></p>
+	<br>
+	<br>
+	<div id="aadressile" style="color:333; font-size: 0.75em;"></div>
+	
+  </body>
+</html>
