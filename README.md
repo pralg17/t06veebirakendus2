@@ -1,3 +1,5 @@
 # t06veebirakendus2
 
-Springi veebirakendus koos andmebaasist otsingu või automaattestidega. 
+Hinnakalkulaatorile lisatud ka automaattestid.
+
+Heroku link: https://hinnakalkkoostestiga.herokuapp.com/hinnakalk.html
