@@ -1,5 +1,5 @@
 # t06veebirakendus2
 
-hinnakalkulaatorile lisatud ka automaattestid.
+Hinnakalkulaatorile lisatud ka automaattestid.
 
-Heroku link:
+Heroku link: https://hinnakalkkoostestiga.herokuapp.com/hinnakalk.html
