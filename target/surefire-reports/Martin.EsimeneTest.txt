@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: Martin.EsimeneTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec <<< FAILURE! - in Martin.EsimeneTest
+CityTest3(Martin.EsimeneTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[Helsinki]> but was:<[Tallinn]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at Martin.EsimeneTest.CityTest3(EsimeneTest.java:30)
+
