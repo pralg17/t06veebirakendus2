@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: henry.EsimeneTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec <<< FAILURE! - in henry.EsimeneTest
+tervitusfunktsioon3Test(henry.EsimeneTest)  Time elapsed: 0.02 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...ka nimi sisse vennas[s]!> but was:<...ka nimi sisse vennas[]!>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at henry.EsimeneTest.tervitusfunktsioon3Test(EsimeneTest.java:33)
+
