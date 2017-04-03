@@ -1,3 +1,5 @@
-# t06veebirakendus2
+# t05veebirakendus
 
-Springi veebirakendus koos andmebaasist otsingu või automaattestidega. 
+SpringBoot abil loodud loodud näitlik temaatiline veebirakendus
+
+Võimalusel kasutada eraldi klasse teemade grupeerimiseks ning andmebaasiühendust.
