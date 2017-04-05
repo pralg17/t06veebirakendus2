@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Martin.EsimeneTest" time="0.001" tests="3" errors="0" skipped="0" failures="1">
+<testsuite name="Martin.EsimeneTest" time="0.004" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el6_8.x86_64/jre/lib/amd64"/>
     <property name="java.vm.version" value="25.121-b13"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/martkasa/public_html/java/t06veebirakendus2"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/martkasa/public_html/java/testimine"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/martkasa/public_html/java/t06veebirakendus2"/>
+    <property name="user.dir" value="/home/martkasa/public_html/java/testimine"/>
     <property name="java.runtime.version" value="1.8.0_121-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el6_8.x86_64/jre/lib/endorsed"/>
@@ -57,13 +57,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="CityTest1" classname="Martin.EsimeneTest" time="0"/>
-  <testcase name="CityTest2" classname="Martin.EsimeneTest" time="0"/>
-  <testcase name="CityTest3" classname="Martin.EsimeneTest" time="0.001">
-    <failure message="expected:&lt;[Helsinki]&gt; but was:&lt;[Tallinn]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<[Helsinki]> but was:<[Tallinn]>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at Martin.EsimeneTest.CityTest3(EsimeneTest.java:30)
-]]></failure>
-  </testcase>
+  <testcase name="koodiTest" classname="Martin.EsimeneTest" time="0.003"/>
+  <testcase name="raamatuTest" classname="Martin.EsimeneTest" time="0.001"/>
 </testsuite>

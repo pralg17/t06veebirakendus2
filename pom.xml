@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>Martin</groupId>
-  <artifactId>testimine</artifactId>
+  <artifactId>boot</artifactId>
   <packaging>jar</packaging>
   <version>1</version>
   
@@ -17,7 +17,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 	 </dependency>
-	 <dependency>
+	  <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 	 </dependency>
@@ -31,3 +31,4 @@
         </plugins>
     </build>
 </project>
+0
