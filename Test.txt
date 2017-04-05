@@ -1,0 +1,18 @@
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running Martin.EsimeneTest
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec <<< FAILURE! - in Martin.EsimeneTest
+CityTest3(Martin.EsimeneTest)  Time elapsed: 0.01 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<Helsinki[]> but was:<Helsinki[2]>
+        at org.junit.Assert.assertEquals(Assert.java:115)
+        at org.junit.Assert.assertEquals(Assert.java:144)
+        at Martin.EsimeneTest.CityTest3(EsimeneTest.java:30)
+
+
+Results :
+
+Failed tests:
+  EsimeneTest.CityTest3:30 expected:<Helsinki[]> but was:<[Tallinn]>
+
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
