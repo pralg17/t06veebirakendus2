@@ -9,14 +9,15 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
 @Configuration
 @EnableWebSecurity
+
 public class TurvaKonf extends WebSecurityConfigurerAdapter {
-	
+
 	/*@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests().antMatchers("/algus").permitAll().
 		anyRequest().authenticated();
 	}*/
-	
+
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication().withUser("juku").password("kala").roles("tavakasutaja");
