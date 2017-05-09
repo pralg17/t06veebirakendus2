@@ -31,3 +31,16 @@ public class Rakendus {
         Rakendus rakendus = new Rakendus();
     }
 }
+
+/*
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running ksenbelo.EsimeneTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in ksenbelo.EsimeneTest
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+*/
