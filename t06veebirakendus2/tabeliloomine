@@ -1,0 +1,15 @@
+
+CREATE TABLE varvid(
+  nimi VARCHAR(30) NOT NULL PRIMARY KEY,
+  hexkood VARCHAR(7)
+);
+
+INSERT INTO varvid VALUES ('Punane', '#FF0000');
+INSERT INTO varvid VALUES ('Oranž', '#FF8000');
+INSERT INTO varvid VALUES ('Kollane', '#FFFF00');
+INSERT INTO varvid VALUES ('Roheline', '#008000');
+INSERT INTO varvid VALUES ('Helesinine', '#00BFFF');
+INSERT INTO varvid VALUES ('Sinine', '#0000FF');
+INSERT INTO varvid VALUES ('Lilla', '#8B00FF');
+
+SELECT * FROM varvid;
