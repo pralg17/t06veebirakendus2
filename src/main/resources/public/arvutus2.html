@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>Arvutamine</title>
+  <script>
+  var yhendus=new XMLHttpRequest();
+  yhendus.onreadystatechange=andmedSaabusid;
+  function arvutamine(){
+    var a1 = document.getElementById("eesnimi").value;
+    var a2 = document.getElementById("perenimi").value;
+    var a3 = document.getElementById("tunnitasu").value;
+    var a4 = document.getElementById("tooaeg").value;
+    console.log(a1);
+    console.log(a2);
+
+    var aadress="/palk?eesnimi="+a1+"&perenimi="+a2+"&tunnitasu="+a3+"&tooaeg="+a4;
+    yhendus.open("GET", aadress, true);
+    yhendus.send();
+  }
+  function andmedSaabusid(){
+    document.getElementById("vastus").innerHTML=yhendus.responseText;
+  }
+  </script>
+</head>
+<h1>Arvutab töö aja järgi neto ja bruto palga ning tööjõukulud firmale.</h1>
+
+<br></br>
+<body>
+  <input type="text" id="eesnimi" placeholder="Eesnimi" >
+  <input type="text" id="perenimi" placeholder="Perenimi" >
+  <input type="number" id="tunnitasu" step="0.01" placeholder="Tunnitasu" >
+  <input type="number" id="tooaeg" step="0.01" placeholder="Tööaeg">
+<br></br>
+  <input type="button" value="Arvutab palgaga seotud kulud" onclick="arvutamine()"/>
+  <div id="vastus">Vastus</div>
+</body>
+</html>
