@@ -29,5 +29,13 @@ public class EsimeneTest{
 		
 	}
 	
+	@Test
+	public void neljasTest(){
+		
+		Rakendus r = new Rakendus();
+		r.lisaInimene("Rihard");
+		assertNotNull(r.nimi, new Object());
+		
+	}
 	
 }	
