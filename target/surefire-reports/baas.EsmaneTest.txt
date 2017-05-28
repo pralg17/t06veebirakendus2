@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: baas.EsmaneTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec <<< FAILURE! - in baas.EsmaneTest
+varjupaigaTest(baas.EsmaneTest)  Time elapsed: 0.015 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<K[oer/Kass nimega Muki asub Rehe varjupaigas. Tema kiibikood on] 23568> but was:<K[ass/Koer nimega Mukiasub Rehe varjupaigas. Tema kiibikood] 23568>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at baas.EsmaneTest.varjupaigaTest(EsmaneTest.java:13)
+
