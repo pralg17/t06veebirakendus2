@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Rakendus {
 	@RequestMapping("/isikuleht")
  	public String isik(String eesnimi, String perekonnanimi, String isikukood){
+ 	eesnimi = "Ats";
+ 	perekonnanimi = "Klemmer";
+ 	isikukood = "39511020244";
  		   return "Tere, "+eesnimi+ " " + perekonnanimi + ", Teie isikukood on " + isikukood + "!";
  	}
 
@@ -22,7 +25,7 @@ public class Rakendus {
  		}
  	}
     public static void main(String[] args) {
-		//System.getProperties().put("server.port", 4743);
+		System.getProperties().put("server.port", 4783);
         SpringApplication.run(Rakendus.class, args);
     }
 }
@@ -33,5 +36,5 @@ public class Rakendus {
 
 
 //Running ats.EsimeneTest
-//Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec - in alari.EsimeneTest
+//Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec - in ats.EsimeneTest
 
