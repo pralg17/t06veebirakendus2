@@ -13,7 +13,7 @@ public class Valjastaja {
       return "Nimi: "+ eesnimi+" "+perenimi+ " Saab sellel kuul palka Brutos " +
       new Arvuta().Arvutapalk(tunnitasu,tooaeg)+
       ". Netos aga: " + new Arvuta().Arvutakatte(tunnitasu, tooaeg)+
-      " Tööandja maksab: "+ new Arvuta().ArvutaKulu(tunnitasu,tooaeg);
+      " TÃ¶Ã¶andja maksab: "+ new Arvuta().ArvutaKulu(tunnitasu,tooaeg);
     }
 
 public static void main(String[] args)throws IOException{
